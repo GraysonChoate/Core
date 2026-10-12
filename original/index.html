@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en" data-v="c" data-r="6">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Core Home · Round 6</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-qr" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3h-3zM21 14v.01M21 18v3h-4M14 20v1"/></symbol>
+<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3 9.5a2.5 2.5 0 0 0 0 5V18a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-3.5a2.5 2.5 0 0 1 0-5V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1z"/><path d="M14.5 5.5v2M14.5 11v2M14.5 16.5v2"/></symbol>
+<symbol id="i-tap" viewBox="0 0 24 24"><path d="M8.2 8.7a5 5 0 0 1 0 6.6M11.7 6a8.8 8.8 0 0 1 0 12M15.2 3.4a12.6 12.6 0 0 1 0 17.2"/></symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+<symbol id="i-userplus" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M19 8v6M16 11h6"/></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></symbol>
+<symbol id="i-chev-d" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16.5" rx="3"/><path d="M3 10h18M8 2.5v4M16 2.5v4"/></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 .3 1.5 1 2 2 2 0-3-1-5 1-8z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M7 5h10l-1.2 15.5H8.2z"/><path d="M6.5 9h11"/><path d="m13 5 1.2-2.5"/></symbol>
+<symbol id="i-bottle" viewBox="0 0 24 24"><path d="M10 2.5h4M10.5 2.5v3L8.5 8.5v12a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-12l-2-3v-3"/><path d="M8.5 13h7"/></symbol>
+<symbol id="i-towel" viewBox="0 0 24 24"><path d="M5 4.5h14v6H5z"/><path d="M7 10.5v9M12 10.5v9M17 10.5v9"/></symbol>
+<symbol id="i-dumb" viewBox="0 0 24 24"><path d="M6.5 7v10M17.5 7v10M3.5 9.5v5M20.5 9.5v5M6.5 12h11"/></symbol>
+<symbol id="i-nav" viewBox="0 0 24 24"><path d="M3 11 21 3l-8 18-2-8z"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-11 11M22 2l-7 20-4-9-9-4z"/></symbol>
+<symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V3m0 0L8 7m4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.4c2.2.7 3.5 2.6 3.5 5.6"/></symbol>
+<symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+<symbol id="i-bars" viewBox="0 0 24 24"><path d="M5 20v-8M12 20V5M19 20v-11"/></symbol>
+<symbol id="i-offline" viewBox="0 0 24 24"><path d="M4 9a12 12 0 0 1 16 0M7 12.5a8 8 0 0 1 10 0M10 16a4 4 0 0 1 4 0M3 3l18 18"/></symbol>
+<symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h6a3 3 0 0 0 0-6h-4a3 3 0 0 1 0-6h6"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M6 12h12M12 6v12"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.8 19.5h18.4z"/><path d="M12 10v4.5"/><path d="M12 17.4h.01"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15zM10 21h4"/></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M7 15h4"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></symbol>
+<symbol id="i-gift" viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="2"/><path d="M3 9h18v-3H3zM12 6v14M12 6c-1-3-5-3-5-1s3 1 5 1zM12 6c1-3 5-3 5-1s-3 1-5 1z"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></symbol>
+<symbol id="i-out" viewBox="0 0 24 24"><path d="M10 4H5v16h5M15 8l4 4-4 4M19 12H9"/></symbol>
+<symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.5-2 5.5-2 6 0M14 10h4M14 14h3"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+</svg>
+
+<div class="stage" id="stage">
+  <div class="phone-col">
+    <div class="vtag" id="vtag"></div>
+    <div class="phone-fit" id="fit">
+    <div class="phone" id="phone">
+      <div class="bg" aria-hidden="true"><i class="l1"></i><i class="l2"></i></div>
+
+      <div class="scroll" id="scroll" data-panel="home">
+        <header class="hdr li" style="--i:0">
+          <div class="hdr-l">
+            <button class="club" id="club" aria-label="Switch location"><span class="hmark mk-slot" data-mk="hdr" id="hmark"></span><span class="cn" id="clubName"></span><svg class="i"><use href="#i-chev-d"/></svg></button>
+            <button class="crowd" id="crowd" aria-label="Busy by hour"><i class="dot"></i><span>Quiet now</span><span class="cr-more">Busy times<svg class="i"><use href="#i-chev-r"/></svg></span></button>
+          </div>
+        </header>
+
+        <div class="acct li" id="acctH" hidden style="--i:1"></div>
+
+        <section class="now li" id="now" style="--i:1" aria-live="polite">
+          <div class="nbg"><i class="nph" id="nph0"></i><i class="nph" id="nph1"></i></div>
+
+          <div class="ns" data-s="next">
+            <div class="top"><span class="eyebrow">Next class today</span></div>
+            <div class="trow"><div class="ttl">Power 60</div><div class="cd"><b>1h 12m</b><span>to start</span></div></div>
+            <div class="sub">9:00 AM · Taylor Bailey</div>
+            <div class="acts"><button class="btn p" id="dirBtn" data-act="directions" aria-label="Directions to Katy, 12 minutes"><svg class="i s"><use href="#i-nav"/></svg><span>12 min away</span></button><span class="in-chip"><svg class="i s"><use href="#i-check"/></svg>Checked in</span></div>
+          </div>
+
+          <div class="ns" data-s="recap">
+            <div class="top"><span class="eyebrow">Class summary</span></div>
+            <div class="trow"><div class="ttl">Summary ready</div></div>
+            <div class="sub">Power 60 · just now</div>
+            <div class="acts stats">
+              <div class="st"><b>52</b><span>min</span></div>
+              <div class="st"><b>78%</b><span>avg effort</span></div>
+              <div class="st"><b><i class="zs sq"></i>Z4</b><span>top zone</span></div>
+              <button class="btn s ico" data-act="summary" aria-label="Open summary"><svg class="i"><use href="#i-chev-r"/></svg></button>
+            </div>
+          </div>
+
+          <div class="ns" data-s="monthly">
+            <div class="top"><span class="eyebrow">Your September</span></div>
+            <div class="trow"><div class="ttl">12 visits</div></div>
+            <div class="sub">Best week: 4 · 6-week streak</div>
+            <div class="acts"><button class="btn p" data-act="story">View recap</button></div>
+          </div>
+
+          <div class="ns" data-s="spot">
+            <div class="top"><span class="eyebrow">Spot opened</span></div>
+            <div class="trow"><div class="ttl">Strength Lab</div><div class="cd"><b id="spotCd">10:00</b><span>to claim</span></div></div>
+            <div class="sub">Sat 12:00 PM · Sam Ortiz</div>
+            <div class="acts"><button class="btn p" data-act="spot-book">Book</button></div>
+          </div>
+
+          <div class="ns" data-s="first">
+            <div class="top"><span class="eyebrow">Your first class</span></div>
+            <div class="trow"><div class="ttl">Power 60</div></div>
+            <div class="sub">Sat 9:00 AM · Taylor Bailey</div>
+            <div class="acts"><button class="btn p" data-act="class-book">Book</button></div>
+          </div>
+
+          <div class="ns" data-s="usual">
+            <div class="top"><span class="eyebrow">Book your usual</span></div>
+            <div class="trow"><div class="ttl">Power 60</div></div>
+            <div class="sub">Sat 9:00 AM · Taylor Bailey</div>
+            <div class="acts"><button class="btn p" data-act="class-book">Book</button></div>
+          </div>
+        </section>
+
+        <section class="week li" id="week" style="--i:2" role="button" tabindex="0" aria-label="Your week: 2 of 3 visits. Open progress">
+          <div class="wk-row">
+            <div class="ring" id="wkRing" data-rs="96" data-rw="8" data-goal="3" data-core="cnt" data-dial="1"></div>
+            <div class="wk-r">
+              <div class="lab">Your week</div>
+              <div class="wk-s"><svg class="i"><use href="#i-flame"/></svg><span><b>6-week</b> streak</span></div>
+              <div class="wk-g" id="wkGoal">1 more visit to hit your goal</div>
+              <div class="cbar" id="cbar"><span class="t"><i></i></span><span class="cn">Challenge 4/16</span></div>
+            </div>
+            <svg class="i wk-go"><use href="#i-chev-r"/></svg>
+          </div>
+          
+        </section>
+
+        <h2 class="sec li" style="--i:3">From your club</h2>
+        <article class="feat li" id="feat" style="--i:3"></article>
+        <div class="row li" id="row" style="--i:4"></div>
+      </div>
+
+      <button class="keybtn glass" id="keyBtn" aria-label="Check in"><svg class="i"><use href="#i-qr"/></svg></button>
+      <div class="status" aria-hidden="true">
+        <span class="tm">7:48</span><i class="isl"></i>
+        <span class="ic"><svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg><svg width="16" height="12" viewBox="0 0 16 12"><path d="M8 11.2 5.7 8.8a3.3 3.3 0 0 1 4.6 0zM2.8 6.3a7.4 7.4 0 0 1 10.4 0L12 7.5a5.700 5.700 0 0 0-8 0zM.6 4.1a10.500 10.500 0 0 1 14.800 0l-1.200 1.200a8.800 8.800 0 0 0-12.400 0z"/></svg><svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="22" height="12" rx="3.500" fill="none" stroke="currentColor" opacity=".5"/><rect x="2" y="2" width="17" height="9" rx="2"/><rect x="24" y="4.500" width="2" height="4" rx="1" opacity=".5"/></svg></span>
+      </div>
+
+      <!-- Schedule -->
+      <section class="scroll panel away" id="scr-sch" data-panel="schedule" aria-label="Schedule" aria-hidden="true" inert>
+        <header class="ph li" style="--i:0"><h1 class="sr">Schedule</h1><button class="club" aria-label="Switch location"><span class="hmark mk-slot" data-mk="hdr"></span><span class="cn"></span><svg class="i"><use href="#i-chev-d"/></svg></button><button class="bell glass" id="allBk" aria-label="All bookings"><svg class="i"><use href="#i-ticket"/></svg><i class="bkn" id="bkn" hidden>1</i></button></header>
+        <div class="srow li" style="--i:1"><div class="seg2" id="schSeg" role="tablist"><button class="on" data-m="cls" role="tab" aria-selected="true">Classes</button><button data-m="one" role="tab" aria-selected="false">1:1</button></div><button class="mo" id="moBtn" aria-label="Month view" aria-expanded="false"><span id="moLab">October</span><svg class="i"><use href="#i-chev-d"/></svg></button></div>
+        <div id="schCls">
+          <div class="mcard li" id="moCard" hidden style="--i:2">
+            <div class="mhd"><h2 id="moTitle">October 2026</h2><button class="mtoday" id="moToday" hidden>Today</button><button class="mnav" id="moPrev" aria-label="Previous month"><svg class="i"><use href="#i-back"/></svg></button><button class="mnav" id="moNext" aria-label="Next month"><svg class="i"><use href="#i-chev-r"/></svg></button></div>
+            <div class="mwk" aria-hidden="true"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
+            <div class="mgd" id="moGrid"></div>
+          </div>
+          <div class="wkS li" style="--i:2"><div class="days" id="days"></div></div>
+          <div class="fchips li" id="fchips" style="--i:3"></div>
+          <div class="glist li" id="clist" style="--i:3"></div>
+        </div>
+        <div id="schOne" hidden><p class="hint2">Personal sessions with your coaches.</p><div class="glist" id="olist"></div></div>
+      </section>
+
+      <!-- Me -->
+      <section class="scroll panel away" id="scr-me" data-panel="me" aria-label="Me" aria-hidden="true" inert>
+        <header class="ph li" style="--i:0"><h1 class="sr">Me</h1><button class="club" aria-label="Switch location"><span class="hmark mk-slot" data-mk="hdr"></span><span class="cn"></span><svg class="i"><use href="#i-chev-d"/></svg></button><button class="bell glass" id="bell" aria-label="Notifications, 1 new"><svg class="i"><use href="#i-bell"/></svg><i class="udot"></i></button></header>
+        <div class="acct li" id="acctM" hidden style="--i:1"></div>
+        <section class="mecard li" style="--i:1">
+          <div class="me-id"><i class="mav">AB</i><div><b>Alex Brooks</b><span id="meClub">Member since March 2025</span></div></div>
+          <div class="me-cr"><div class="me-c"><b id="meCr">8</b> of 12 classes left</div><div class="me-s">Renews Nov 1</div></div>
+          <div class="me-bar" role="img" aria-label="Classes used this month"><i id="meBar" style="transform:scaleX(.333)"></i></div>
+        </section>
+        <div class="mgrp li" style="--i:2" id="mlist"></div>
+      </section>
+
+      <section class="prog" id="prog" aria-label="Progress" aria-hidden="true">
+        <div class="prog-top">
+          <button class="back glass" id="progBack" aria-label="Back"><svg class="i"><use href="#i-back"/></svg></button><h1>Progress</h1>
+        </div>
+        <div class="prog-body" id="progBody">
+          <div class="prog-seg" id="progSeg"><button class="on" data-pr="week" aria-pressed="true">This week</button><button data-pr="month" aria-pressed="false">This month</button><button data-pr="all" aria-pressed="false">All time</button></div>
+          <div class="pstats" id="pstats"></div>
+          <div class="prog-goal"><span>Weekly goal</span><div class="stepper"><button id="gMinus" aria-label="Fewer"><svg class="i"><use href="#i-minus"/></svg></button><b id="gVal">3</b><button id="gPlus" aria-label="More"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
+          <div class="pcard"><div class="lab">October</div><div class="cal" id="cal"></div></div>
+          <div class="lab pl">Milestones · workouts</div>
+          <div class="miles-row" id="mrow" tabindex="-1"></div>
+          <div class="lab pl">Recent</div>
+          <div class="glist" id="recent"></div>
+        </div>
+      </section>
+
+      <section class="sub" id="sub" aria-label="Details" aria-hidden="true" inert>
+        <div class="sub-top"><button class="back glass" id="subBack" aria-label="Back"><svg class="i"><use href="#i-back"/></svg></button><h1 id="subT"></h1></div>
+        <div class="sub-body" id="subBody"></div>
+      </section>
+
+      <section class="out" id="out" aria-label="Outside the app" aria-hidden="true" inert>
+        <div class="out-top"><button class="back glass" id="outBack" aria-label="Back to app"><svg class="i"><use href="#i-back"/></svg></button><div class="seg2" id="outSeg" role="tablist"><button class="on" data-v="wallet" role="tab" aria-selected="true">Wallet</button><button data-v="lock" role="tab" aria-selected="false">Lock</button><button data-v="widget" role="tab" aria-selected="false">Widget</button></div></div>
+
+        <div class="ov ov-w on" data-v="wallet">
+          <div class="pass" id="pass">
+            <div class="pass-hd"><span class="pass-mk"><span class="mk-slot" data-mk="sheet" style="--mw:112px;--mh:32px"></span></span><span class="pass-pl">Monthly · 12</span></div>
+            <b class="pass-nm">Alex Brooks</b>
+            <div class="pass-code" id="passCode" data-ck="both"><canvas id="passQr" width="232" height="232" aria-label="Check-in code"></canvas><span class="pass-tap" aria-label="Tap at the reader"><svg class="i"><use href="#i-tap"/></svg></span></div>
+            <i class="pass-sw" aria-hidden="true"></i>
+          </div>
+          <div class="ov-act"><button class="btn p wide" id="wlAdd"><svg class="i s"><use href="#i-wallet"/></svg>Add to Wallet</button><span class="wl-done" id="wlDone" hidden><svg class="i s"><use href="#i-check"/></svg>Added</span></div>
+        </div>
+
+        <div class="ov ov-l" data-v="lock" hidden>
+          <div class="lk-date">Saturday, October 10</div>
+          <div class="lk-time">7:48</div>
+          <div class="lk-card" id="lkCard" role="button" tabindex="0" data-st="up"></div>
+          <div class="lk-st" id="lkSt"><button class="on" data-s="up">1h 12m</button><button data-s="near">15 min</button><button data-s="here">Here</button></div>
+        </div>
+
+        <div class="ov ov-g" data-v="widget" hidden>
+          <div class="hs">
+            <div class="wg wg-m" id="wgM" role="button" tabindex="0" aria-label="Next class widget">
+              <div class="wg-l"><span class="wg-mk"><span class="mk-slot" data-mk="sheet" style="--mw:64px;--mh:20px"></span></span><b class="wg-t">Power 60</b><span class="wg-w">9:00 AM</span><b class="wg-cd">1h 12m</b></div>
+              <div class="ring" id="wgRing" data-rs="104" data-rw="9" data-goal="3" data-core="cnt" data-dial="1"></div>
+            </div>
+            <div class="wg wg-sm" id="wgS" role="button" tabindex="0" aria-label="Next class widget, small">
+              <span class="wg-mk"><span class="mk-slot" data-mk="sheet" style="--mw:64px;--mh:20px"></span></span><b class="wg-t">Power 60</b><span class="wg-w">9:00 AM</span><b class="wg-cd">1h 12m</b>
+            </div>
+            <i class="ic"></i><i class="ic"></i><i class="ic"></i><i class="ic"></i>
+          </div>
+          <div class="dock"><i class="ic"></i><i class="ic"></i><i class="ic"></i><i class="ic"></i></div>
+        </div>
+      </section>
+
+      <div class="offbar" id="offBar" hidden role="status"><svg class="i s"><use href="#i-offline"/></svg>Offline</div>
+      <div class="errc glass" id="errCard" hidden role="alert"><i class="errI"><svg class="i"><use href="#i-alert"/></svg></i><b>Couldn't load</b><button class="btn p" id="errRetry">Retry</button></div>
+
+      <section class="auth" id="auth" aria-label="Sign in" aria-hidden="true" inert>
+        <div class="auth-in">
+          <div class="auth-mk"><div class="mk-slot" data-mk="sheet" style="--mw:200px;--mh:64px"></div></div>
+          <input class="auth-f" id="authEm" type="email" inputmode="email" autocomplete="email" placeholder="Email" aria-label="Email">
+          <button class="btn p big wide" id="authGo">Continue</button>
+          <div class="auth-or" aria-hidden="true"><i></i><span>or</span><i></i></div>
+          <button class="btn s big wide" data-auth="apple">Continue with Apple</button>
+          <button class="btn s big wide" data-auth="google">Continue with Google</button>
+        </div>
+      </section>
+
+      <section class="scroll panel away" id="scr-shop" data-panel="shop" aria-label="Shop" aria-hidden="true" inert>
+        <header class="ph li" style="--i:0"><h1 class="sr">Shop</h1><button class="club" aria-label="Switch location"><span class="hmark mk-slot" data-mk="hdr"></span><span class="cn"></span><svg class="i"><use href="#i-chev-d"/></svg></button><button class="bell glass" id="shBag" aria-label="Your orders" hidden><svg class="i"><use href="#i-bag"/></svg><b class="bcnt" id="shCnt">0</b></button></header>
+        <button class="shf li" id="shFeat" style="--i:1" data-p="p10"><span class="shf-t"><i class="eyebrow">Featured</i><b>10-class pack</b><em>$110 · $11 a class</em></span><span class="shf-ic"><svg class="i"><use href="#i-ticket"/></svg></span></button>
+        <div class="fchips li" id="shChips" style="--i:2"></div>
+        <div class="pgrid li" id="shGrid" style="--i:3"></div>
+      </section>
+
+      <nav class="tabs glass" id="tabs" aria-label="Main">
+        <i class="tab-ind" id="tabInd"></i>
+        <button class="tab on" data-tab="home"><svg class="i"><use href="#i-home"/></svg>Home</button>
+        <button class="tab" data-tab="schedule"><svg class="i"><use href="#i-cal"/></svg>Schedule</button>
+        <button class="tab" data-tab="shop" id="tabShop" hidden><svg class="i"><use href="#i-bag"/></svg>Shop</button>
+        <button class="tab" data-tab="me"><svg class="i"><use href="#i-user"/></svg>Me</button>
+      </nav>
+
+      <button class="orb" id="orb" aria-label="Voice assistant"><i class="halo"></i><i class="arc"></i><span class="bars"><i></i><i></i><i></i><i></i><i></i><i></i></span><i class="udot" aria-label="Unread reply from staff"></i></button>
+
+      <div class="layer" id="layer">
+        <div class="scrim" id="scrim"></div>
+
+        <!-- Check-in key -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-checkin" aria-label="Check-in key" style="height:568px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <div class="ck-qr" id="ckQr" data-ck="both">
+            <div class="mk-slot ck-mark" data-mk="sheet" style="--mw:150px;--mh:44px"></div>
+            <h3 class="sh-t">Alex Brooks</h3>
+            <p class="sh-s" id="ckSub">Scan or tap at the door</p>
+            <div class="qr-wrap"><canvas id="qr" width="232" height="232"></canvas></div>
+            <div class="ck-tapbig" aria-hidden="true"><i></i><i></i><i></i><span><svg class="i"><use href="#i-tap"/></svg></span></div>
+            <div class="qr-meta"><span class="qr-ref"><div class="ring" id="qrRing" data-rs="28" data-rw="3"></div><span id="qrTxt">Refreshes in 30s</span></span><span class="chip"><svg class="i s"><use href="#i-offline"/></svg>Works offline</span></div>
+            <div class="ck-tap"><svg class="i"><use href="#i-tap"/></svg><span>Or tap at the reader</span></div>
+            <button class="btn s demo" id="simScan">Simulate scan or tap</button>
+          </div>
+          <div class="ck-fail" id="ckFail" inert>
+            <div class="fail-ic"><svg class="i"><use href="#i-x"/></svg></div>
+            <h3 class="sh-t big">Not recognized</h3>
+            <button class="btn p wide" id="ckRetry">Try again</button>
+            <button class="lnk" id="ckDesk">Ask front desk</button>
+          </div>
+          <div class="ck-ok" id="ckOk">
+            <div class="ok-ring" id="okRing"><div class="ring" id="okR" data-rs="176" data-rw="11" data-dial="1"></div></div>
+            <h3 class="sh-t big">Checked in</h3>
+            <div class="chip streak" id="ckCnt"></div>
+            <button class="btn s wide" id="ckWallet"><svg class="i s"><use href="#i-wallet"/></svg>Add to Wallet</button>
+            <button class="btn p wide" data-close>Done</button>
+          </div>
+        </section>
+
+        <!-- Milestone share -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-share" aria-label="Share your milestone" style="height:664px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <h3 class="sh-t">Share your milestone</h3>
+          <div class="seg2 look" id="shLook" role="tablist" aria-label="Share style"><button class="on" data-look="card" role="tab" aria-selected="true">Card</button><button data-look="sticker" role="tab" aria-selected="false">Sticker</button><button data-look="photo" role="tab" aria-selected="false">Photo</button></div>
+          <div class="sc-wrap" id="scWrap" data-look="card"><div class="sc" id="sc"></div></div>
+          <div class="sh-btns"><button class="btn p" data-act="toast" data-msg="Demo: opens Instagram Stories">Stories</button><button class="btn s" data-act="toast" data-msg="Demo: opens Snapchat">Snapchat</button><button class="btn s" data-act="toast" data-msg="Demo: phone share sheet">More</button></div>
+          <p class="sh-tip" id="shTip">Caption copied. Paste it and add location.</p>
+        </section>
+
+        <!-- Class -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-class" aria-label="Class" style="height:652px">
+          <div class="cl-ph"><i class="cl-img"></i><i class="cl-fade"></i></div>
+          <button class="x glass" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <div class="cl-body">
+            <div class="lab" id="clLab">Sat · 9:00 AM · 60 min</div>
+            <h3 class="sh-t big" id="clT">Power 60</h3>
+            <div class="coach"><i class="av" id="clAv">TB</i><div><b id="clCoach">Taylor Bailey</b><span id="clRole">Coach</span></div></div>
+            <div class="cl-chips" id="clChips"></div>
+            <div class="cl-promo" id="clPromo"><b>October Challenge</b><span>This class counts toward your 16.</span></div>
+            <div class="cl-foot">
+              <button class="btn p big" id="bookBtn"><span class="bl">Book</span></button>
+              <p class="cl-note" id="bookNote">8 classes left in your plan</p>
+              <button class="lnk bring" id="bfBtn" data-act="friend"><svg class="i s"><use href="#i-userplus"/></svg>Bring a friend</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shop item -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-shopitem" aria-label="Item" style="height:540px">
+          <div class="si-art" id="siArt"><svg class="i"><use href="#i-bag"/></svg></div>
+          <button class="x glass" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <div class="si-body" id="siBody">
+            <div class="lab" id="siCat">Drinks</div>
+            <h3 class="sh-t big" id="siT">Protein shake</h3>
+            <p class="sh-s" id="siD"></p>
+            <div class="si-row"><b class="si-p" id="siP">$6</b><div class="qty" id="siQ"><button id="qMin" aria-label="Less"><svg class="i"><use href="#i-minus"/></svg></button><b id="qN" aria-live="polite">1</b><button id="qPlus" aria-label="More"><svg class="i"><use href="#i-plus"/></svg></button></div></div>
+            <div class="cl-foot"><button class="btn p big" id="siBtn"><span class="bl" id="siBl">Reserve</span></button><p class="cl-note" id="siNote"></p></div>
+          </div>
+          <div class="si-done" id="siDone" inert>
+            <i class="sd-ic"><svg class="i"><use href="#i-check"/></svg></i>
+            <h3 class="sh-t" id="sdT">Reserved</h3>
+            <p class="sh-s" id="sdS"></p>
+            <div class="sd-code" id="sdCode">K7 42</div>
+            <p class="sd-it" id="sdIt"></p>
+            <button class="btn p big" data-close>Done</button>
+          </div>
+        </section>
+
+        <!-- Permission ask -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-perm" aria-label="Permission" style="height:396px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <div class="pmp-ic" id="pmpIc"><svg class="i"><use href="#i-nav"/></svg></div>
+          <h3 class="sh-t" id="pmpT"></h3>
+          <p class="sh-s" id="pmpS"></p>
+          <button class="btn p wide" id="pmpYes">Allow</button>
+          <button class="lnk" id="pmpNo">Not now</button>
+        </section>
+
+        <!-- Bring a friend -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-friend" aria-label="Bring a friend" style="height:316px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <h3 class="sh-t">Bring a friend</h3>
+          <p class="sh-s" id="bfSub">Free guest pass · Power 60 · Sat 9:00 AM</p>
+          <div class="bf-msg"><i class="av">AB</i><p id="bfMsg"></p></div>
+          <div class="sh-btns"><button class="btn p" data-act="toast" data-msg="Demo: opens Messages">Messages</button><button class="btn s" data-act="toast" data-msg="Link copied">Copy link</button><button class="btn s" data-act="toast" data-msg="Demo: phone share sheet">More</button></div>
+        </section>
+
+        <!-- Promo -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-promo" aria-label="Promotion" style="height:604px">
+          <div class="cl-ph"><i class="cl-img" id="pmImg"></i><i class="cl-fade"></i></div>
+          <button class="x glass" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <div class="cl-body">
+            
+            <h3 class="sh-t big" id="pmT"></h3>
+            <p class="pm-line" id="pmL"></p>
+            <div class="pm-meta" id="pmM"></div>
+            <div class="cl-foot"><button class="btn p big" id="pmBtn"><span class="bl"></span></button></div>
+          </div>
+        </section>
+
+        <!-- Crowd -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-crowd" aria-label="Busy by hour" style="height:452px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <h3 class="sh-t">Busy by hour</h3>
+          <p class="sh-s">Today · typical for a Saturday</p>
+          <div class="cr-now"><i class="dot"></i><b>Quiet now</b><span>Best time to go: 1–3 PM</span></div>
+          <div class="cr-chart" id="crChart"></div>
+          <div class="cr-ax"><span>5a</span><span>9a</span><span>1p</span><span>5p</span><span>9p</span></div>
+        </section>
+
+        <!-- Class summary -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-summary" aria-label="Class summary" style="height:540px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <h3 class="sh-t big">Power 60</h3>
+          <p class="sh-s">Today · 9:00 AM · Taylor Bailey</p>
+          <div class="sm-stats">
+            <div><b>52</b><span>min</span></div>
+            <div><b>78%</b><span>avg effort</span></div>
+            <div><b><i class="zs sq"></i>Z4</b><span>top zone</span></div>
+          </div>
+          <div class="sm-z" id="smZ" role="list" aria-label="Minutes in each zone"></div>
+          <div class="sm-cmp"><svg class="i"><use href="#i-up"/></svg><span>Up from <b>74%</b> last Power 60</span></div>
+          <div class="sh-btns"><button class="btn s" data-act="share-from-progress">Share</button><button class="btn p" data-act="book-next">Book next</button></div>
+        </section>
+
+        <!-- Monthly recap story -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-story" aria-label="Monthly recap" style="height:620px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <div class="st-bars" id="stBars"><i></i><i></i><i></i><i></i></div>
+          <div class="st-slides" id="stSlides">
+            <div class="st-s"><div class="lab">Your September</div><div class="st-big">12</div><p>visits. Your best week had 4.</p></div>
+            <div class="st-s"><div class="lab">Your favorite</div><div class="st-big sm">Power 60</div><p>with Taylor Bailey, 5 times.</p></div>
+            <div class="st-s"><div class="lab">Streak</div><div class="st-big">6</div><p>weeks in a row. Next milestone: 25 workouts.</p></div>
+            <div class="st-s"><div class="lab">October goal</div><div class="st-big">3</div><p>visits a week.</p><div class="sh-btns"><button class="btn p" data-act="toast" data-msg="Goal set to 3 a week">Set goal</button><button class="btn s" data-act="share-from-story">Share</button></div></div>
+          </div>
+          <p class="sh-tip" id="stTip">Tap to continue</p>
+        </section>
+
+        <!-- All bookings -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-bookings" aria-label="All bookings" style="height:620px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <h3 class="sh-t">All bookings</h3>
+          <div class="seg2 sm" id="bkSeg" role="group" aria-label="Booking type"><button class="on" data-bk="up" aria-pressed="true">Upcoming</button><button data-bk="past" aria-pressed="false">Past</button><button data-bk="wl" aria-pressed="false">Waitlist</button><button data-bk="cx" aria-pressed="false">Canceled</button></div>
+          <div class="glist" id="bkList"></div>
+        </section>
+
+        <!-- Notifications + inbox -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-inbox" aria-label="Notifications" style="height:560px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <h3 class="sh-t">Notifications</h3>
+          <div class="glist inbox" id="inboxList"></div>
+        </section>
+
+        <!-- Orb -->
+        <section class="sheet" role="dialog" aria-modal="true" id="sh-orb" aria-label="Assistant" style="height:600px">
+          <button class="x" data-close aria-label="Close"><svg class="i"><use href="#i-x"/></svg></button>
+          <div class="orb-state" id="orbState">Tap to talk</div>
+          <div class="seg" id="orbSeg"><button class="on" data-th="assistant">Assistant</button><button data-th="staff">Message staff<i class="udot"></i></button></div>
+          <div class="thread" id="thAssistant">
+            <div class="bub me">Any classes tomorrow morning?</div>
+            <div class="bub ai" id="aiLine">Power 60 has spots Saturday at 9:00.</div>
+            <div class="ans" id="ans"><div><b>Book Power 60</b><span>Sat 9:00 AM · 6 spots left</span></div><button class="btn p" data-act="class-book-orb">Book</button></div>
+            <div class="listen" id="listenBox"><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="thread" id="thStaff" hidden>
+            <div class="bub me">Can I bring a friend Saturday?</div>
+            <div class="bub ai">Hi Alex! Yes, first visit is free. We saved them a spot.<span class="bt">Maya · front desk · 7:41 AM</span></div>
+          </div>
+          <div class="inrow"><input id="orbIn" type="text" placeholder="Type a message" aria-label="Message"><button class="btn p ico" aria-label="Talk"><svg class="i"><use href="#i-mic"/></svg></button></div>
+        </section>
+
+        <!-- Milestone badge (center) -->
+        <div class="miles" id="miles" aria-hidden="true">
+          <div class="badge" id="badge"><div class="ring" id="bgRing" data-rs="168" data-rw="10" data-core="0" data-dial="1"></div><div class="bg-n"><b>25</b><span>workouts</span></div></div>
+          <div class="mi-t">Milestone</div>
+          <div class="mi-s">25 workouts. Nice work, Alex.</div>
+        </div>
+      </div>
+
+      <div class="toast glass" id="toast" role="status"></div>
+    </div>
+    </div>
+  </div>
+
+  <aside class="bar" id="bar">
+    <h1>Core · Home</h1>
+    <p class="hint">Each button runs one effect. Tags mark proposals.</p>
+    <div class="btns" id="bVar" hidden></div>
+    <div class="grp"><h2>Play the day <em>Proposal</em></h2><div class="btns"><button id="dayPlay">Play the day</button><button id="dayNext" disabled>Skip ▸</button><button id="dayAgain" disabled>Replay</button></div><div class="dayp"><i id="dayBar"></i></div><p class="hint small" id="dayBeat">60 seconds. Tap the phone to pause.</p></div>
+    <div class="grp"><h2>1 · Now card</h2><div class="btns" id="bNow"><button data-now="next">Next class</button><button data-now="recap">After class <em>Proposal</em></button><button data-now="monthly">Monthly <em>Proposal</em></button><button data-now="usual">Nothing booked · usual</button></div></div>
+    <div class="grp"><h2>1b · Check-in method</h2><div class="btns" id="bCk"><button data-ck="both">QR + tap</button><button data-ck="qr">QR only</button><button data-ck="tap">Tap only</button><button id="bArrive">Arrive at club <em>Proposal</em></button><button id="bCkReset">Reset: not checked in</button></div></div>
+    <div class="grp"><h2>1a · Where you are <em>Proposal</em></h2><div class="btns" id="bDist"><button data-d="far">Far · 12 min</button><button data-d="soon">Leave now</button><button data-d="near">At the club</button></div></div>
+    <div class="grp"><h2>Shop <em>Proposal</em></h2><div class="btns" id="bShop"><button data-sh="on">Shop on</button><button data-sh="off">Shop off</button><button data-sh="none">Pay: none</button><button data-sh="reserve">Pay: reserve</button><button data-sh="app">Pay: in app</button><button data-sh="item">Open an item</button><button data-sh="orders">Last order</button><button data-sh="reset">Reset orders</button></div></div>
+    <div class="grp"><h2>Me screens</h2><div class="btns" id="bSub"><button data-sub="Membership">Membership</button><button data-sub="Payments">Payments</button><button data-sub="Profile details">Profile details</button><button data-sub="Documents">Documents</button><button data-sub="Refer friends">Refer friends</button><button data-sub="Settings">Settings</button></div></div>
+    <div class="grp"><h2>Outside the app <em>Proposal</em></h2><div class="btns" id="bOut"><button data-out="wallet">Wallet pass</button><button data-out="lock">Lock screen</button><button data-out="widget">Widget</button><button id="bWlReset">Reset: not in Wallet</button></div></div>
+    <div class="grp"><h2>Edge states <em>Proposal</em></h2><div class="btns" id="bEdge"><button data-e="auth">Sign-in</button><button data-e="newm">New member</button><button data-e="load">Loading</button><button data-e="off">Offline</button><button data-e="err">Error</button><button data-e="closed">Closed day</button><button data-e="spot">Spot opened</button><button data-e="late">Late cancel</button><button data-e="nocr">No credits</button><button data-e="frozen">Frozen</button><button data-e="expired">Expired</button><button data-e="ckfail">Failed check-in</button><button data-e="p-loc">Ask: location</button><button data-e="p-not">Ask: notifications</button><button data-e="p-wal">Ask: Wallet</button><button data-e="reset">Reset all</button></div></div>
+    <div class="grp"><h2>Flows</h2><div class="btns" id="bFlow">
+      <button data-f="checkin">2 · Check-in key</button><button data-f="scan">2 · Simulate scan</button><button data-f="milestone">3 · Milestone <em>Proposal</em></button><button data-f="class">4 · Class grows</button><button data-f="class-full">4 · Class (full)</button><button data-f="ring">5 · Ring to Progress</button><button data-f="promo">6 · Promo grows</button><button data-f="crowd">7 · Crowd line <em>Proposal</em></button><button data-f="story">Monthly story</button><button data-f="summary">Class summary</button><button data-f="month">Month view</button></div></div>
+    <div class="grp"><h2>8 · Orb</h2><div class="btns" id="bOrb"><button data-o="idle">Idle</button><button data-o="listening">Listening</button><button data-o="thinking">Thinking</button><button data-o="speaking">Speaking</button><button data-o="answer">Answer</button><button data-o="staff">Staff unread</button></div></div>
+    <div class="grp"><h2>9 · Tabs</h2><div class="btns" id="bTab"><button data-t="home">Home</button><button data-t="schedule">Schedule</button><button data-t="shop">Shop</button><button data-t="me">Me</button></div></div>
+    <div class="grp"><h2>10 · Brand</h2><div class="btns" id="bBrand"><button data-b="xgt">XGT</button><button data-b="usapt">USA PT</button><button data-b="dark">Test Dark</button><button data-b="light">Test Light</button><button data-name="1">30-char name</button></div></div>
+    <div class="grp"><h2>11 · 12</h2><div class="btns"><button id="bRm" aria-pressed="false">Reduce Motion: off</button><button id="bReplay">Replay load-in</button></div></div>
+    <p class="hint small">URL: <code>?v=a|b|c</code> <code>?brand=</code> <code>?state=</code> <code>?bar=0</code></p>
+  </aside>
+</div>
+<script src="brands.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

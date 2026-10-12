@@ -1,0 +1,44 @@
+/* Core Home: tokens. Brand inputs are logo, color 1, color 2, name, photos.
+   Everything else here is shared by every club. Never hard-code a brand color in a component. */
+@font-face{font-family:'Heebo';font-weight:300;font-display:block;src:url(assets/fonts/heebo-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:'Heebo';font-weight:400;font-display:block;src:url(assets/fonts/heebo-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Heebo';font-weight:500;font-display:block;src:url(assets/fonts/heebo-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Heebo';font-weight:700;font-display:block;src:url(assets/fonts/heebo-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Heebo';font-weight:900;font-display:block;src:url(assets/fonts/heebo-latin-900-normal.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:600;font-display:block;src:url(assets/fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:700;font-display:block;src:url(assets/fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:'Montserrat';font-weight:800;font-display:block;src:url(assets/fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+
+/* Brand inputs (set by JS from the brand's two colors). c1x / c2x are the on-dark versions:
+   a color under 3:1 on the base is lifted to about 4.5:1, hue kept. on1 = text on a c1x fill. */
+@property --c1{syntax:'<color>';inherits:true;initial-value:#FC8107}
+@property --c2{syntax:'<color>';inherits:true;initial-value:#1E90FF}
+@property --c1x{syntax:'<color>';inherits:true;initial-value:#FC8107}
+@property --c2x{syntax:'<color>';inherits:true;initial-value:#1E90FF}
+@property --on1{syntax:'<color>';inherits:true;initial-value:#05080F}
+
+:root{
+  /* base: dark only */
+  --base:#050A16; --base-0:#030710; --base-1:#061024; --surf:#0B1220;
+  --ink:#F4F7FB; --ink2:rgba(244,247,251,.86); --ink3:rgba(244,247,251,.70);
+  --line:rgba(255,255,255,.08);
+  /* functional colors: identical for every club. Each also carries a word or a shape. */
+  --ok:#2BD28E; --err:#EA2A3F; --warn:#DCE3EE;
+  --z1:#41DCF4; --z2:#2BD28E; --z3:#F4D321; --z4:#F9861F; --z5:#EA2A3F; --z0:hsl(230 10% 62%);
+  /* derived from brand tokens by rule */
+  --c1-tint:color-mix(in srgb,var(--c1x) 38%,#fff);
+  --c1-lite:color-mix(in srgb,var(--c1x) 72%,#fff);
+  --c1-glow:color-mix(in srgb,var(--c1x) 42%,transparent);
+  --c1-wash:color-mix(in srgb,var(--c1x) 24%,transparent);
+  --c2-glow:color-mix(in srgb,var(--c2x) 42%,transparent);
+  --c2-wash:color-mix(in srgb,var(--c2x) 22%,transparent);
+  /* type scale 34 / 28 / 22 / 17 / 15 / 13, min 11 */
+  --t34:34px; --t28:28px; --t22:22px; --t17:17px; --t15:15px; --t13:13px; --t11:11px;
+  /* shape and space: 8 pt grid, 44 pt targets */
+  --r-card:24px; --r-sm:12px; --r-sheet:28px; --hit:44px; --gut:20px;
+  /* motion: springs bounce .15 (JS writes the linear() curves); color and opacity never bounce */
+  --ease:cubic-bezier(.2,0,0,1);
+  --d-tap:200ms; --d-sheet:350ms; --d-screen:450ms;
+  --sp-tap:cubic-bezier(.2,0,0,1); --sp-sheet:cubic-bezier(.2,0,0,1); --sp-screen:cubic-bezier(.2,0,0,1); --sp-land:cubic-bezier(.2,0,0,1);
+}
+html{transition:--c1 .5s var(--ease),--c2 .5s var(--ease),--c1x .5s var(--ease),--c2x .5s var(--ease),--on1 .5s var(--ease)}
